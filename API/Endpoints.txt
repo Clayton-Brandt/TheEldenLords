@@ -1,0 +1,15 @@
+Get/bosses
+Get/bosses/{Id}
+Get/bosses/name{Bosses}
+Post/bosses
+Patch/bosses{Id}
+Delete/bosses/{Id}
+Get/completion/{User_Id}
+Get/completion/{User_Id}/{Id}
+Post/completion
+GET /bosses/{boss_id}/Location
+GET /bosses/{boss_id}/Lore
+GET /bosses/{boss_id}/Strats
+GET /bosses/{boss_id}/Prerequisites
+GET /bosses/{boss_id}/Help
+GET /bosses/{boss_id}/Rewards
