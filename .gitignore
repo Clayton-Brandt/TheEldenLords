@@ -1,0 +1,30 @@
+# This will ignore certain folders from uploading to GitHub, like the .idea folder for the Database. That folder would've messed up your DataGrip settings.
+
+# =========================
+# JetBrains / DataGrip
+# =========================
+.idea/
+*.iml
+
+# =========================
+# Python (API + Discord Bot if using Python)
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env/
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
