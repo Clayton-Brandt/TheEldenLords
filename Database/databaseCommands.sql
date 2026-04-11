@@ -18,8 +18,7 @@ DROP TABLE IF EXISTS boss_lore;
 CREATE TABLE bosses (
     boss_id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
-    location TEXT,
-    lore TEXT
+    location TEXT
 );
 
 CREATE TABLE boss_weaknesses (
@@ -104,23 +103,23 @@ CREATE TABLE user_progress (
 
 
 -- Insert statements for the database.
-INSERT INTO bosses (name, location, lore) VALUES
-('Margit The Fell Omen', 'Stormveil Castle', NULL),
-('Godrick the Grafted', 'Stormveil Castle', NULL),
-('Rennala Queen of the Full Moon', 'Raya Lucaria Academy', NULL),
-('Starscourge Radahn', 'Redmane Castle', NULL),
-('Mohg Lord of Blood', 'Mohgwyn Palace', NULL),
-('Rykard Lord of Blasphemy', 'Volcano Manor', NULL),
-('Draconic Tree Sentinel', 'Capital Outskirts', NULL),
-('Godfrey First Elden Lord (Golden Shade)', 'Leyndell, Royal Capital', NULL),
-('Morgott The Omen King', 'Leyndell, Royal Capital', NULL),
-('Fire Giant', 'Flame Peak', NULL),
-('Godskin Duo', 'Crumbling Farum Azula', NULL),
-('Beast Clergyman/Maliketh The Black Blade', 'Crumbling Farum Azula', NULL),
-('Sir Gideon-Ofnir the All Knowing', 'Leyndell, Ashen Capital', NULL),
-('Godfrey First Elden Lord (Hoarah Loux)', 'Leyndell, Ashen Capital', NULL),
-('Radagon of the Golden Order', 'Elden Throne', NULL),
-('Elden Beast', 'Elden Throne', NULL);
+INSERT INTO bosses (name, location) VALUES
+('Margit The Fell Omen', 'Stormveil Castle'),
+('Godrick the Grafted', 'Stormveil Castle'),
+('Rennala Queen of the Full Moon', 'Raya Lucaria Academy'),
+('Starscourge Radahn', 'Redmane Castle'),
+('Mohg Lord of Blood', 'Mohgwyn Palace'),
+('Rykard Lord of Blasphemy', 'Volcano Manor'),
+('Draconic Tree Sentinel', 'Capital Outskirts'),
+('Godfrey First Elden Lord (Golden Shade)', 'Leyndell, Royal Capital'),
+('Morgott The Omen King', 'Leyndell, Royal Capital'),
+('Fire Giant', 'Flame Peak'),
+('Godskin Duo', 'Crumbling Farum Azula'),
+('Beast Clergyman/Maliketh The Black Blade', 'Crumbling Farum Azula'),
+('Sir Gideon-Ofnir the All Knowing', 'Leyndell, Ashen Capital'),
+('Godfrey First Elden Lord (Hoarah Loux)', 'Leyndell, Ashen Capital'),
+('Radagon of the Golden Order', 'Elden Throne'),
+('Elden Beast', 'Elden Throne');
 
 INSERT INTO boss_weaknesses VALUES
 (1,'Slash'), (2,'All Physical Damage'),
