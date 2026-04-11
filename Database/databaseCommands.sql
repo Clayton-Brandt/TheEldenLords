@@ -9,6 +9,7 @@ DROP TABLE IF EXISTS user_progress;
 DROP TABLE IF EXISTS user_boss_runs;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS bosses;
+DROP TABLE IF EXISTS boss_lore;
 
 
 
@@ -61,6 +62,13 @@ CREATE TABLE boss_help_links (
     link_type TEXT NOT NULL DEFAULT 'wiki',
     title TEXT,
     url TEXT NOT NULL,
+    FOREIGN KEY (boss_id) REFERENCES bosses(boss_id)
+);
+
+CREATE TABLE boss_lore (
+    lore_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    boss_id INTEGER NOT NULL,
+    lore TEXT NOT NULL,
     FOREIGN KEY (boss_id) REFERENCES bosses(boss_id)
 );
 
@@ -200,6 +208,24 @@ INSERT INTO boss_stats (boss_id, phase, hp, defense, stance) VALUES
 (14,1,21903,120,120),
 (15,1,13339,121,120),
 (16,1,22127,121,150);
+
+INSERT INTO boss_lore (boss_id, lore) VALUES
+(1, 'Margit is an Omen, who gained notoriety during The Shattering, in which he slaughtered countless champions who harbored ambitions for Lordship, stacking high their corpses during the Second Defense of Leyndell'),
+(2, 'Godrick is a descendant of the Golden Lineage, the bloodline that began with Queen Marika the Eternal and her first consort Godfrey. Only a distant relation of Marika''s line, his divine blood was sorely diluted, and he was viewed as the runt of the litter. Godrick idolized the first Elden Lord, desiring his ancestor to witness his feats.'),
+(3, 'The young Lunar Princess was an astrologer who gazed at the night sky and chased the stars. In her youth, Rennala and her younger sister, Rellana, encountered moons that one day made them champions. Hers was an enchanting Full Moon. Later, she bewitched the Academy of Raya Lucaria with her lunar magic, becoming its master.'),
+(4, 'Red-Maned Radahn was the son of Radagon, a champion of the Erdtree, and Queen Rennala of the Full Moon, born after the Second Liurnian War. He has two siblings, Rykard and Ranni. From a young age, he was enamored with Elden Lord Godfrey and adorned his armor with lions, the symbol of Godfrey and Serosh.'),
+(5, 'Mohg was born of the Golden Lineage and twin brother of Morgott. The twins were accursed Omen and as a result, were confined and shackled to the Subterranean Shunning Grounds below Leyndell. Mohg embraced his Omen blood and made contact with an Outer God, The Formless Mother, who ignited his accursed blood with bloodflame, granting him powerful magic.'),
+(6, 'Under the Golden Order, Rykard was a ruthless justiciar who commanded a company of inquisitors. They persecuted and mercilessly tortured those considered heretics to the Golden Order. He spent time in the volcanic Mt. Gelmir, where he discovered the ancient magma hexes of a forgotten serpent-worshiping religion native to the region, which he brought back into practical use as new sorceries. Rykard was also an orchestrator of the Night of the Black Knives.'),
+(7, 'Possessed of great strength and abundant Grace, Queen Marika''s mounted Sentinels met little resistance as they charged down her enemies. Very few were permitted to join their unbreakable ranks. Defenders of the Erdtree as the Golden standard. After the Ancient Dragon Gransax attacked Leyndell, some Sentinels adopted characteristics of the Dragons.'),
+(8, 'A Spectral Shade, radiating a Golden hue, adorning the likeness of the First Elden Lord, Godfrey.'),
+(9, 'Rightful Heir of the Golden Lineage. Despite his royal pedigree, he and his brother Mohg were born with accursed blood that caused tangled horns to sprout from their infant bodies. These growths branded them as Omen spurned by the Erdtree and excluded from its Grace. Though banished, his devotion to the Erdtree never wavered and he became its defender.'),
+(10, 'Long before the Erdtree, the Giants claimed the inhospitable northern mountains after driving away the Ice Dragons that once ruled them. They worshipped their Fell God and tended its Flame within the Great Forge. When Queen Marika ushered in the Age of the Erdtree, she ordered Godfrey and his Crucible Knights to wage war with the Giants, fearing that their flame could burn her Erdtree. This is the last Giant who has stood tall, defending the Flame.'),
+(11, 'Draped in robes of soft skin, this duo serves the Gloam Eyed Queen, who served the Rune of Death. Their black flames were able to kill any God that stood in their path to service. However after Maliketh killed the Gloam Eyed Queen, Queen Marika sealed away the power of the Rune of Death and her and her kin were made immortal. This duo lays in wait in their old God''s Temple.'),
+(12, 'A loyal Shadowbound Beast, Half Brother of Queen Marika. He defeated the Gloam Eyed Queen and Queen Marika sealed the Rune of Death within his blade. Causing the power of the god slaying black flame to be lost except within his blade. There is no demigod who did not fear his name.'),
+(13, 'Tarnished Leader of the Roundtable Hold. Called to the Lands Between by guidance of Grace. Gideon wished to become Elden Lord. At some point, he engages the Two Fingers, and in doing so learns that everything including the Erdtree and the Two Fingers had been broken. Gideon glimpses into the will of Queen Marika, shuddering in fear at an end that should not be.'),
+(14, 'The first Elden Lord. He was an unmatched Champion who earned his right to Lordship through sheer strength alone. Godfrey led Marika''s Golden armies and was named Lord of the Battlefield. At the end of his campaign, Godfrey and his armies were stripped of their Grace by Marika, who ordered them to fight in a distant land, to die, and after which she promised they would regain what she had taken from them and with the strength required to brandish the Elden Ring.'),
+(15, 'Radagon first rose to prominence during the Liurnian Wars, the redlocked Great Champion. After which he married Rennala and had 3 children. While married to Rennala, he studied Glintstone sorcery. After Godfrey was stripped of Grace, he returned to the Capital of Leyndell and became the consort of Marika, becoming the Second Elden Lord. They had two children together, Malenia and Miquella. Though a secret, some learned of a horrific truth about the man: he was in fact Queen Marika all along, like one soul inhabiting two bodies.'),
+(16, 'A long-necked aquatic creature, the Elden Beast is a living constellation of shimmering amber starlight suspended in a translucent silhouette. Set upon a golden star by the Greater Will, the arrival of the Elden Beast was one of the earliest events known to have occurred in the Lands Between. It was the vassal of the Greater Will and the living incarnation of the concept of Order. The Elden Beast was later forged into the Elden Ring and those who became a vessel for it were known as Lord.');
 
 INSERT INTO users (discord_user_id) VALUES
 ('user_001'),
