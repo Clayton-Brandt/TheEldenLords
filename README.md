@@ -12,7 +12,7 @@ DataGrip with SQLite for the database.
 - To get the database working properly, open up DataGrip.
 - Create new project.
 - Navigate to the Database folder, set that as your project.
-- Add a data source and select SQLite. Name it eldenring.
+- Add a data source and select SQLite. Make sure it's named eldenring.sqlite.
 - If a console window doesn't appear, right click eldenring.sqlite and select query console.
 - Go back to File Explorer and open up the databaseCommands.sql file. I'd open it up in Notepad.
 - Copy all that code, go back to DataGrip, paste it into the console, select all, and press the run button.
