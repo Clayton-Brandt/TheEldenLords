@@ -1,3 +1,10 @@
+from fastapi import APIRouter, HTTPException
+from database import get_db
+from models import Boss, BossUpdate
+
+router = APIRouter(prefix="/bosses", tags=["bosses"])
+
+
 @router.get("/")
 def get_bosses(name: str | None = None):
     conn = get_db()
@@ -10,6 +17,7 @@ def get_bosses(name: str | None = None):
 
     rows = cur.fetchall()
     return [dict(row) for row in rows]
+
 
 @router.get("/{boss_id}")
 def get_boss(boss_id: int):
@@ -29,9 +37,11 @@ def create_boss(boss: Boss):
     cur = conn.cursor()
     cur.execute(
         "INSERT INTO bosses (name, location) VALUES (?, ?)",
-        (boss.name, boss.location))
+        (boss.name, boss.location)
+    )
     conn.commit()
     return "Boss created"
+
 
 @router.put("/{boss_id}")
 def update_boss(boss_id: int, boss: BossUpdate):
@@ -39,9 +49,11 @@ def update_boss(boss_id: int, boss: BossUpdate):
     cur = conn.cursor()
     cur.execute(
         "UPDATE bosses SET name=?, location=? WHERE boss_id=?",
-        (boss.name, boss.location, boss_id))
+        (boss.name, boss.location, boss_id)
+    )
     conn.commit()
     return "Boss updated"
+
 
 @router.delete("/{boss_id}")
 def delete_boss(boss_id: int):
@@ -49,4 +61,4 @@ def delete_boss(boss_id: int):
     cur = conn.cursor()
     cur.execute("DELETE FROM bosses WHERE boss_id=?", (boss_id,))
     conn.commit()
-    return "boss deleted"
+    return "Boss deleted"
