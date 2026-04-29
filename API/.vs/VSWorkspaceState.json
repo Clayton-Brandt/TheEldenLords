@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\API"
+    "\\API",
+    "\\API\\Boss specifics"
   ],
-  "SelectedNode": "\\API\\completion.py",
+  "SelectedNode": "\\API\\Boss specifics\\prerequisites.py",
   "PreviewInSolutionExplorer": false
 }
