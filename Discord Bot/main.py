@@ -4,6 +4,7 @@ import logging
 from dotenv import load_dotenv
 import os
 import requests
+import api
 
 # Load token
 load_dotenv()
