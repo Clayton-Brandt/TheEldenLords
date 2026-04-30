@@ -17,3 +17,7 @@ DataGrip with SQLite for the database.
 - Go back to File Explorer and open up the databaseCommands.sql file. I'd open it up in Notepad.
 - Copy all that code, go back to DataGrip, paste it into the console, select all, and press the run button.
 - It should create the entire database. Also control + enter sometimes runs the code.
+
+# Running the API
+To run the API, navigate to the API folder and run this command in terminal.
+python -m uvicorn main:app --reload
