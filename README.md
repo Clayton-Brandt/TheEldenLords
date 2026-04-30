@@ -1,11 +1,14 @@
 # TheEldenLords
 
 The best app ever.
+Apparently we need a .env file with this: DISCORD_TOKEN=the_bot_token
+
+First install the database. Then run the API. Lastly run the Discord bot.
 
 We're programming in Python in Visual Studio Code.
-For the API we'll use Python with Flask.
-
+For the API we'll use Python with fastapi.
 DataGrip with SQLite for the database.
+Frontend is Discord.
 
 # Database Installation
 --- You should have the entire project downloaded before you set up the database ---
@@ -20,4 +23,9 @@ DataGrip with SQLite for the database.
 
 # Running the API
 To run the API, navigate to the API folder and run this command in terminal.
-python -m uvicorn main:app --reload
+- python -m uvicorn main:app --reload
+
+# Running the Discord Bot
+To run the Discord bot first make sure you have the right packages installed.
+Navigate to the Discord Bot folder and run this command.
+- pip install -r requirements.txt
