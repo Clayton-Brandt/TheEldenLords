@@ -2,10 +2,12 @@
 
 The best app ever.
 
-We're programming in Python in Visual Studio Code.
-For the API we'll use Python with Flask.
+First install the database. Then run the API. Lastly run the Discord bot.
 
+We're programming in Python in Visual Studio Code.
+For the API we'll use Python with fastapi.
 DataGrip with SQLite for the database.
+Frontend is Discord.
 
 # Database Installation
 --- You should have the entire project downloaded before you set up the database ---
