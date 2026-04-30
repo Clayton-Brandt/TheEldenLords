@@ -21,3 +21,8 @@ DataGrip with SQLite for the database.
 # Running the API
 To run the API, navigate to the API folder and run this command in terminal.
 python -m uvicorn main:app --reload
+
+# Running the Discord Bot
+To run the Discord bot first make sure you have the right packages installed.
+Navigate to the Discord Bot folder and run this command.
+pip install -r requirements.txt
