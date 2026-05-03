@@ -83,5 +83,13 @@ def get_boss_help_links(boss_id):
     response.raise_for_status()
     return response.json()
 
+def get_user_progress(user_id):
+    response = requests.get(f"{API_URL}/completion/{user_id}", timeout=5)
+    response.raise_for_status()
+    return response.json()
 
+def get_boss_completion(run_id, boss_id):
+    response = requests.get(f"{API_URL}/completion/{run_id}/{boss_id}", timeout=5)
+    response.raise_for_status()
+    return response.json()
 

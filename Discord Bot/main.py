@@ -31,6 +31,7 @@ async def on_ready():
 
 # ---------------- COMMANDS ----------------
 
+
 @bot.command()
 async def bosses(ctx):
     try:
@@ -263,6 +264,45 @@ async def helpboss(ctx, boss_id: int):
         await ctx.send("No help links found for this boss.")
 
 
+@bot.command()
+async def progress(ctx, user_id: int):
+    try:
+        data = api.get_user_progress(user_id)
+
+        if not data:
+            await ctx.send("No progress found.")
+            return
+
+        message = f"**Progress for User {user_id}:**\n"
+
+        for entry in data[:15]:
+            run = entry.get("run_id", "?")
+            boss = entry.get("boss_id", "?")
+            completed = entry.get("completed", False)
+
+            status = "✅" if completed else "❌"
+            message += f"Run {run} - Boss {boss}: {status}\n"
+
+        await ctx.send(message)
+
+    except Exception:
+        await ctx.send("No progress found for this user.")
+
+
+@bot.command()
+async def completion(ctx, run_id: int, boss_id: int):
+    try:
+        data = api.get_boss_completion(run_id, boss_id)
+
+        completed = data.get("completed", False)
+        status = "Completed ✅" if completed else "Not Completed ❌"
+
+        await ctx.send(
+            f"Run {run_id}, Boss {boss_id}: {status}"
+        )
+
+    except Exception:
+        await ctx.send("No completion data found.")
 
 
 # ---------------- RUN BOT ----------------
