@@ -35,7 +35,7 @@ First you will need a discord bot of your own. But before that make your own per
 - First go to Discord Developer Portal (you might need to sign in, if you already haven't) 
 then click on "New Application".
 - Name the new application elden_ring just in case.
-- Go to the "Bot" tab, click on Add Bot
+- Go to the "Bot" tab
 - Under Privileged Gateway Intents, enable: Server Members Intent & Message Content Intent
 - Lastly, copy the Discord Token, we will use this later
 - Then go to OAuth2 and then URL Generator. Give it these scopes:
