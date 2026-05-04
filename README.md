@@ -34,6 +34,7 @@ Navigate to the Discord Bot folder and run this command.
 First you will need a discord bot of your own. 
 - First go to Discord Developer Portal (you might need to sign in, if you already haven't) 
 then click on "New Application".
+- Name the new application elden_ring just in case.
 - Go to the "Bot" tab, click on Add Bot
 - Under Privileged Gateway Intents, enable: Server Members Intent & Message Content Intent
 - Lastly, copy the Discord Token, we will use this later
