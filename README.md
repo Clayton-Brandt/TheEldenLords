@@ -31,7 +31,7 @@ Navigate to the Discord Bot folder and run this command.
 - pip install -r requirements.txt
 
 # Setting up the Discord Bot
-First you will need a discord bot of your own. 
+First you will need a discord bot of your own. But before that make your own personal Discord server.
 - First go to Discord Developer Portal (you might need to sign in, if you already haven't) 
 then click on "New Application".
 - Name the new application elden_ring just in case.
