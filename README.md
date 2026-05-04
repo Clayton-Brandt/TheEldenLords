@@ -35,9 +35,11 @@ First you will need a discord bot of your own. But before that make your own per
 - First go to Discord Developer Portal (you might need to sign in, if you already haven't) 
 then click on "New Application".
 - Name the new application elden_ring just in case.
-- Go to the "Bot" tab, click on Add Bot
+- Go to the "Bot" tab
 - Under Privileged Gateway Intents, enable: Server Members Intent & Message Content Intent
 - Lastly, copy the Discord Token, we will use this later
+- Then go to OAuth2 and then URL Generator. Give it these scopes and permissions:
+- Bot, 
 - Next make a copy of the Discord Bot project for yourself, or if you already have one, make sure you have a copy of main.py, api.py, and a .env file
 - The discord token you have, copy and paste it in the .env file. You'll need quotations around the token. No spaces. You can open the .env file in Notepad.
 - Now you will need two terminals open, one for the API and the other for the bot
