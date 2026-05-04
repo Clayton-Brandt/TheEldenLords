@@ -12,6 +12,7 @@ Frontend is Discord.
 
 # Database Installation
 --- You should have the entire project downloaded before you set up the database ---
+- This project already has the .db file, but just to be safe you should start from scratch.
 - To get the database working properly, open up DataGrip.
 - Create new project.
 - Navigate to the Database folder, set that as your project.
