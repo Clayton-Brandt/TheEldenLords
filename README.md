@@ -38,12 +38,12 @@ then click on "New Application".
 - Go to the "Bot" tab
 - Under Privileged Gateway Intents, enable: Server Members Intent & Message Content Intent
 - Lastly, copy the Discord Token, we will use this later
+- The discord token you have, copy and paste it in the .env file. You'll need quotations around the token. No spaces. You can open the .env file in Notepad.
 - Then go to OAuth2 and then URL Generator. Give it these bot permissions:
 - View channels, send messages, embed links, read message history, use slash commands
 - For scopes, only select bot
 - Scroll down and copy the generated URL and paste it. Let your browser open to Discord. Select your server for the bot and press authorize.
 - Next make a copy of the Discord Bot project for yourself, or if you already have one, make sure you have a copy of main.py, api.py, and a .env file
-- The discord token you have, copy and paste it in the .env file. You'll need quotations around the token. No spaces. You can open the .env file in Notepad.
 - Now you will need two terminals open, one for the API and the other for the bot
 - In the first terminal for the API, make sure your directory is in the API folder then run in the terminal: python -m uvicorn main:app --reload
 - In the second terminal for the discord bot, make sure you are in the Discord Bot folder, then in the terminal run: python main.py
