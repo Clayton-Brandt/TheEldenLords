@@ -1,6 +1,6 @@
 # TheEldenLords
 
-The best Discord bot in the world.
+The best Discord bot in the WORLD!
 
 First install the database. Then run the API. Lastly run the Discord bot.
 
