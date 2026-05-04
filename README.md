@@ -39,7 +39,7 @@ then click on "New Application".
 - Under Privileged Gateway Intents, enable: Server Members Intent & Message Content Intent
 - Lastly, copy the Discord Token, we will use this later
 - The discord token you have, copy and paste it in the .env file. You'll need quotations around the token. No spaces. You can open the .env file in Notepad.
-- Then go to OAuth2 and then URL Generator. Give it these bot permissions:
+- Then in the Discord Developer Portal go to OAuth2 and then URL Generator. Give it these bot permissions:
 - View channels, send messages, embed links, read message history, use slash commands
 - For scopes, only select bot
 - Scroll down and copy the generated URL and paste it. Let your browser open to Discord. Select your server for the bot and press authorize.
