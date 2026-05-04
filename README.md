@@ -49,7 +49,7 @@ then click on "New Application".
 - Invite your bot to your discord server
 - Now with everything booted up you have a list of commands you can use
 
-* just as a note, if something says (boss id), that is the number associated with the boss from 2 through 16 (skip 1)
+* Just as a note, if something says (boss id), that is the number associated with the boss from 2 through 16 (skip 1)
 * Also if you don't know what you want the bot to do, check the database. It'll have all the information you might want.
 - !bosses
 - !boss (boss id)
