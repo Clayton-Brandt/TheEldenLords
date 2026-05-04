@@ -27,7 +27,7 @@ To run the API, navigate to the API folder and run this command in terminal.
 
 # Running the Discord Bot
 To run the Discord bot first make sure you have the right packages installed.
-Navigate to the Discord Bot folder and run this command.
+Navigate to the root folder of this project and run this command:
 - pip install -r requirements.txt
 
 # Setting up the Discord Bot
