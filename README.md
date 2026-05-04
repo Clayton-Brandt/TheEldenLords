@@ -1,7 +1,6 @@
 # TheEldenLords
 
-The best app ever.
-Apparently we need a .env file with this: DISCORD_TOKEN=the_bot_token
+The best Discord bot in the world.
 
 First install the database. Then run the API. Lastly run the Discord bot.
 
